@@ -1,0 +1,26 @@
+.content{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    margin-top: 100px;
+    padding: auto;
+    
+}
+
+table{    
+    width: 100%;
+}
+
+table th{
+    font-size: 20px;
+}
+
+table td{
+    text-align: center;
+    font-size: 17px;
+}
+
+.action-btn{
+
+    float: right;
+}

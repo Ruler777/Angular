@@ -1,0 +1,68 @@
+<div class="center">
+    
+      <form [formGroup]="form" (ngSubmit)="mod()">
+          
+        <h3>Modify Character</h3>
+
+        
+        
+        <mat-form-field class="max-width">
+          <mat-label>Name</mat-label>
+          <input matInput type="text" name="name" required formControlName="name">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="max-width">
+          <mat-label>Nickname</mat-label>
+          <input matInput type="text" name="Nickname" required formControlName="nickname">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="max-width">
+          <mat-label>Species</mat-label>
+          <input matInput type="text" name="species" required formControlName="species">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="max-width">
+          <mat-label>Birth</mat-label>
+          <input matInput type="text" name="birth" required formControlName="birth">
+        </mat-form-field>
+        <br>
+
+        
+          <mat-label>Gender: </mat-label>          
+          <mat-radio-group aria-label="Select an option" name="gender" required formControlName="gender" >
+            <mat-radio-button value="Male">Male </mat-radio-button>
+            &nbsp;
+            <mat-radio-button value="Female">Female </mat-radio-button>
+          </mat-radio-group>
+        
+        <br>
+
+        <mat-form-field class="max-width">
+          <mat-label>Alignment</mat-label>          
+          <mat-select name="alignment" required formControlName="alignment">
+            <mat-option value="Neutral"> Neutral</mat-option>
+            
+            <mat-option value="Neutral Good">Neutral Good</mat-option>
+            <mat-option value="Chaotic Good">Chaotic Good</mat-option>
+            <mat-option value="Lawful Good">Lawful Good</mat-option>
+            
+            <mat-option value="Lawful Evil">Lawful Evil</mat-option>
+            <mat-option value="Neutral Evil">Neutral Evil</mat-option>
+            <mat-option value="Chaotic Evil">Chaotic Evil</mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+          <div style="display: flex; justify-content: flex-end;">
+            <button mat-button (click)="dialogRef.close()" class="margin-right">Cancel</button>
+            <button type="submit" mat-raised-button color="primary" class="max-width"
+          [disabled]="form.invalid">Modify</button>
+          </div>
+        
+          
+      </form>
+    
+  </div>
+  
